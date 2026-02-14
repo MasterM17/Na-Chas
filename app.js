@@ -1,7 +1,4 @@
-//!npm isntall mongoose
-//!NPM INSTALL EXPRESS
 
-// mongodb+srv://MasterM17_db_user:Rx4xksriqHCSPe@cluster0.hwfkhyb.mongodb.net/?appName=Cluster0
 
 const express = require("express");
 const mongoose = require("mongoose");
