@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All blogs</title>
+  </head>
+  <body>
+    <%- include('partials/navbar') %>
+    <main>
+      <h1>Welcome to my Blogs</h1>
+      <div class="main-wrapper">
+        <% blogs.forEach(blog => { %>
+       <div class="card">
+        <h2><%= blog.naslov %></h2>
+        <p><%= blog.tekst %></p>
+        <p><%= blog.ocenka %></p>
+        <p><%= blog.avtor %></p>
+        
+                
+      </div>
+      <% }) %>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+
+  text-align: center;
+}
+
+.card {
+  background: wheat;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.4s ease;
+  box-shadow: 0 15px 35px rgba(61, 53, 47, 0.07)
+}
+
+.add-form {
+  display: flex;
+  flex-direction: row;
+  gap: 130px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}

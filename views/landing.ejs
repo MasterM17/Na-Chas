@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <%- include('partials/navbar') %>
+
+    <main>
+      <hero><h1>Welcome to my Blog</h1></hero>
+      <div class="main-wrapper">
+        <% blogs.forEach(blog => { %>
+       <div class="card">
+        <h2><%= blog.naslov %></h2>
+        <p><%= blog.tekst %></p>
+        <p><%= blog.ocenka %></p>
+        <p><%= blog.avtor %></p>
+        <a href="/singleBlog/<%= blog.id %>">klikni</a>
+        <form action="/delete/<%= blog.id %>" method="post">
+        <button type="submit" onclick="return confirm ('Are you sure ?')">Delete</button></form>
+        </form>
+        
+      </div>
+      <% }) %>
+      
+      </div>
+      <div class="add-form">
+        <form action="/addBlog" method="post">
+            <input type="text" name="naslov" placeholder="Vnesi naslov" required>
+            <input type="text" name="tekst" placeholder="Vnesi tekst" required>
+            <input type="number" name="ocenka" placeholder="Vnesi ocenka" >
+            <input type="text" name="avtor" placeholder="Vnesi avtor" >
+            
+      </div>
+
+      
+    </main>
+
+    
+  </body>
+</html>
